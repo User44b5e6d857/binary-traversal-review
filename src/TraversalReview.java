@@ -275,7 +275,16 @@ public class TraversalReview {
      * @return whether every value is divisible by k
      */
     public static boolean hasNonDivisible(TreeNode node, int k) {
-        return false;
+        if(node == null) return false;
+        if(node.data % k != 0)
+        {
+            return true;
+        }
+
+        boolean left = hasNonDivisible(node.left, k);
+        boolean right = hasNonDivisible(node.right, k);
+
+        return left || right;
     }
 
     /**
