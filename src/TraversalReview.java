@@ -96,7 +96,7 @@ public class TraversalReview {
      * Result: 8
      * 
      * @param node
-     * @return
+     * @return maximum even value
      */
     public static int evenMax(TreeNode node) {
         if(node == null) return Integer.MIN_VALUE;
